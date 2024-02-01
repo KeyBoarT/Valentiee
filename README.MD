@@ -20,7 +20,7 @@
 
 ### Demo Screeshots
 
-![Metalink Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Metalink Desktop Demo](./readme-images/screenshot.png "Desktop Demo")
 
 ### Prerequisites
 
