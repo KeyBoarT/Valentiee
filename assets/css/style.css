@@ -19,6 +19,7 @@
     --regular-purple: rgb(53, 46, 93);
     --regular-light-purple: rgb(81, 74, 118);
     --regular-red: rgb(205, 22, 45);
+    --blood-red: rgb(255, 87, 51);
     --regular-dark-red: rgb(82, 3, 9);
     --regular-cream: rgb(244, 198, 216);
     --watermelon: rgb(252, 108, 133);
@@ -111,7 +112,7 @@ a {
     color: inherit;
 }
 
-img { height: auto; }
+img { height: auto;}
 
 input,
 button {
@@ -201,12 +202,57 @@ html {
 }
 
 .icon {
+    width: max-content;
     transition: var(--transition-2);
     border-radius: var(--radius-circle);
     padding: 12px;
     font-size: 36px;
 }
 /*#endregion reused  */
+
+/*-----------------------------------*\
+  #SPLASH
+\*-----------------------------------*/
+/*#region splash  */
+.splash {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    transition: all ease-in-out 1000ms;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash.fade {
+    top: -100%;
+    opacity: 0;
+}
+
+.splash img {
+    width: 30%;
+    filter: drop-shadow(0 0 0.75rem rgb(255, 87, 51));
+    animation: heart .6s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1.07);
+    }
+    80% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+/*#endregion splash  */
 
 /*-----------------------------------*\
   #HEADER
@@ -242,6 +288,10 @@ html {
 .header-action {
     display: flex;
     gap: 8px;
+}
+
+.header-action .icon {
+    color: #49a09d;
 }
 
 .navbar {
@@ -410,6 +460,7 @@ html {
     height: 300px;
     overflow: hidden;
     border-radius: var(--radius-8);
+    cursor: pointer;
 }
 
 .slider-item .img-wrapper img {
@@ -433,3 +484,43 @@ html {
     align-items: center;
     justify-content: space-between;
 }
+
+.slider-item-description .btn-icon {
+    color: var(--ruby)
+}
+
+/*-----------------------------------*\
+  #SSS
+\*-----------------------------------*/
+/*#region sss  */
+
+.qna-container {
+    display: grid;
+    row-gap: 36px;
+}
+
+.qna-card {
+    border-radius: var(--radius-12);
+    padding: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.qna-card .qna-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qna-btn ion-icon { flex-shrink: 0; }
+
+.qna-header .qna-btn { color: var(--regular-light-purple); background: none; }
+
+.qna-content { color: var(--regular-purple); }
+
+.qna-content { display: none; }
+
+.qna-card.active .qna-content { display: block; }
+
+.qna-card.active .qna-btn ion-icon { transform: translateY(-10px) rotate(.5turn); }
+
+/*#endregion sss  */
