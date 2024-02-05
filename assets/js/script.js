@@ -4,7 +4,6 @@ setTimeout(() => {
 }, 2000);
 //#endregion splash
 
-
 //#region qna
 qnaButtons = document.getElementsByClassName('qna-btn');
 
@@ -36,3 +35,21 @@ backTopBtn.addEventListener('click', () => {
 window.addEventListener("scroll", activeElementOnScroll);
 
 //#endregion back-to-top
+
+//#region top-collections
+const imgWrappers = document.getElementsByClassName('img-wrapper');
+
+for(let i = 0, len = imgWrappers.length; i < len; i++) {
+  imgWrappers[i].addEventListener('click', () => {
+    imgWrappers[i].children[1].classList.toggle('active');
+  });
+}
+//#endregion top-colllections
+
+//#region dark-mode
+const modeSwitchBtn = document.querySelector('[mode-switch]');
+modeSwitchBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+  modeSwitchBtn.classList.toggle('active');
+});
+//#endregion dark-mode
