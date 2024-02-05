@@ -279,6 +279,16 @@ html {
     z-index: 4;
 }
 
+.header.active {
+    position: fixed;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -291,7 +301,18 @@ html {
 }
 
 .header-action .icon {
-    color: #49a09d;
+    color: var(--white);
+}
+
+.header-action .icon:is(:hover, :focus-visible) {
+    background: transparent;
+    transition: all ease .5s;
+    animation: shake .5s;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}
 }
 
 .navbar {
@@ -420,9 +441,10 @@ html {
 /*#endregion hero  */
 
 /*-----------------------------------*\
-  #top templates
+  #TOP TEMPLATES
 \*-----------------------------------*/
 
+/*#region top-templates */
 .top-templates {
     width: 100%;
 }
@@ -489,6 +511,8 @@ html {
     color: var(--ruby)
 }
 
+/*#endregion top-templates  */
+
 /*-----------------------------------*\
   #SSS
 \*-----------------------------------*/
@@ -533,7 +557,6 @@ html {
 footer {
     width: 100%;
     height: auto;
-    background-color: #355c7d;
 }
 
 footer .container {
@@ -578,7 +601,6 @@ footer .content-wrapper {
 .input-wrapper input {
     border: none;
     outline: none;
-    color: var(--regular-light-purple);
 }
 
 .content-wrapper button {
@@ -588,3 +610,39 @@ footer .content-wrapper {
 
 .footer-bottom { text-align: center; color: var(--regular-purple); opacity: .7; }
 /*#endregion footer  */
+
+/*-----------------------------------*\
+  #BACKGROUND
+\*-----------------------------------*/
+/*#region bg */
+.bg-color {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: var(--radius-circle);
+    filter: blur(200px);
+    z-index: -1;
+    background: linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+/*#endregion bg  */
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+/* #region back-to-top */
+.btn-btt {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    display: none;
+    background: var(--dark-pink);
+    color: var(--white);
+}
+
+.btn-btt.active { display: flex; }
+
+/*#endregion back-to-top  */
