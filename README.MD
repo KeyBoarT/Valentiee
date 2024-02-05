@@ -12,7 +12,7 @@
 
   Valentines, we create your private love websites, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://codewithsadee.github.io/metalink/"><strong>➥ Live Demo</strong></a>
+  <a href="https://valentie.netlify.app/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ### Demo Screeshots
 
-![Metalink Desktop Demo](./readme-images/screenshot.png "Desktop Demo")
+![Valentiee Desktop Demo](./readme-images/screenshot.png "Desktop Demo")
 
 ### Prerequisites
 
