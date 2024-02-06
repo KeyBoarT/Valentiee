@@ -53,3 +53,18 @@ modeSwitchBtn.addEventListener('click', () => {
   modeSwitchBtn.classList.toggle('active');
 });
 //#endregion dark-mode
+
+const btnPrivacyOpen = document.querySelector('[data-privacy-open]');
+const btnPrivacyClose = document.querySelector('[data-privacy-close]');
+const sectionPrivacy = document.querySelector('[data-privacy]');
+
+
+function privacyOpen() {
+    sectionPrivacy.style.display = 'block';
+}
+
+function privacyClose() {
+    sectionPrivacy.style.display = 'none';
+}
+btnPrivacyOpen.addEventListener('click', privacyOpen);
+btnPrivacyClose.addEventListener('click', privacyClose);
