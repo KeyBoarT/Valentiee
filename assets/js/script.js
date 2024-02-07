@@ -54,6 +54,7 @@ modeSwitchBtn.addEventListener('click', () => {
 });
 //#endregion dark-mode
 
+//#region privacy
 const btnPrivacyOpen = document.querySelector('[data-privacy-open]');
 const btnPrivacyClose = document.querySelector('[data-privacy-close]');
 const sectionPrivacy = document.querySelector('[data-privacy]');
@@ -68,3 +69,22 @@ function privacyClose() {
 }
 btnPrivacyOpen.addEventListener('click', privacyOpen);
 btnPrivacyClose.addEventListener('click', privacyClose);
+//#endregion privacy
+
+//#region menu
+const btnMenu = document.querySelector('[data-menu]');
+const navbar = document.querySelector('[data-navbar]');
+
+btnMenu.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+  btnMenu.classList.toggle('active');
+});
+//#endregion menu
+
+//#region window-resize
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    navbar.classList.add('active');
+  }
+});
+//#endregion window-resize

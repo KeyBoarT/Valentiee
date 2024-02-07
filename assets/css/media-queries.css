@@ -1,0 +1,105 @@
+/*-----------------------------------*\
+  #index.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 SZRSoft
+ */
+
+/*-----------------------------------*\
+  #MAX WIDTH   
+\*-----------------------------------*/
+
+@media (max-width: 1440px) {
+
+  :root {
+    --headline-md: 3rem;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero .hero-img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  :root {
+    --headline-lg: 4rem;
+  }
+
+  .top-templates .slider .slider-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-top .container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .footer-top .footer-list {
+    margin-top: 24px;
+  }
+
+  .footer-top .footer-list-title {
+    margin-block-end: 0;
+  }
+
+  .header .logo { display: none; }
+
+  .logo.mini { display: block; }
+
+  .hero .hero-img { height: 400px; }
+}
+
+@media (max-width: 768px) {
+
+  .container { padding-inline: 12px !important; }
+
+  .header .navbar { 
+    border-block-end: 3px solid var(--secondary-color); 
+    backdrop-filter: blur(5px); 
+    background: linear-gradient(rgba(75,0,130,.1), rgba(131,21,219,.1));
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-inline: 16px;
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .header .logo.mini { display: none; }
+
+  .header .logo { display: block; text-align: center;}
+
+  .header .container .navbar-list { display: inline; }
+
+  .navbar-list .navbar-link { text-align: center;}
+
+  .header .header-action .icon.menu { display: block; }
+}
+
+@media (max-width: 646px) {
+
+  :root {
+    --section-padding: 0px !important;
+  }
+
+  .hero { --section-padding: 12px 24px; }
+
+  .hero .hero-title { line-height: 1.25; }
+
+  .hero .hero-img { height: 300px; }
+
+  .hero .hero-text { display: none; }
+
+  .top-templates .slider .slider-container {
+    grid-template-columns: 1fr;
+  }
+}
