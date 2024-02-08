@@ -34,6 +34,8 @@
     --headline-lg: 4rem;
   }
 
+  .hero.section { padding-bottom: 30px; }
+
   .top-templates .slider .slider-container {
     grid-template-columns: 1fr 1fr;
   }
