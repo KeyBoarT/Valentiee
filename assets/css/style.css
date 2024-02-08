@@ -505,7 +505,7 @@ body {
 
 .hero-img {
     position: relative;
-    height: 600px;
+    width: 100%;
     transition: var(--transition-2);
     animation: upToDown 2s linear 0s infinite normal;
     filter: drop-shadow(0 0 0.75rem rebeccapurple);
