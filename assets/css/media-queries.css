@@ -34,8 +34,6 @@
     --headline-lg: 4rem;
   }
 
-  .hero.section { padding-bottom: 30px; }
-
   .top-templates .slider .slider-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -90,6 +88,8 @@
 }
 
 @media (max-width: 646px) {
+
+  .hero.section { padding-bottom: 50px; }
 
   :root {
     --section-padding: 12px !important;
